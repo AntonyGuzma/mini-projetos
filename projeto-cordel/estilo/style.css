@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+:root{
+    --fonte1:  Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: dark;
+   
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte1);
+    font-size: 5vw;
+}
+
+header > p{
+    padding-bottom: 50px;
+    font-size: 1.6vw;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+section > p{
+    padding-bottom: 2em;
+}
+
+section.imagen{
+    background-color: rgba(0, 0, 0, 0.604);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.569);
+    background-attachment: fixed;
+
+}
+
+section.imagen > p{
+    display: inline-block;
+    padding:  5px;
+    background-color: rgba(0, 0, 0, 0.447);
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
