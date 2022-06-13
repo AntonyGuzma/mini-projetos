@@ -20,15 +20,20 @@ document.querySelector('.btnplay').addEventListener('click', tocarmsc)
 //evento a clicar no botao proximo usando funcao anonima
 document.querySelector('.proxima').addEventListener('click', () =>{ 
     indexmusica++
+    if(indexmusica > 1){
+        indexmusica = 1;
+    }
+    pausarmsc() 
     renderizarmusica(indexmusica)
 })
 
 //evento a clicar no botao voltar usando funcao anonima
 document.querySelector('.voltar').addEventListener('click', () =>{ 
+    indexmusica--
     if(indexmusica < 0){
         indexmusica = 1;
     }
-    indexmusica--
+    pausarmsc()     
     renderizarmusica(indexmusica)
 })
 
@@ -73,7 +78,8 @@ function atualizarbarra(){
 
     let tempocorrido = document.querySelector('.inicio')
 
-    tempocorrido.textContent = segundoparaminutos(Math.floor(musica.currentTime))
+    tempocorrido.textContent = segundoparaminutos(Math.floor(musica.currentTime))   
+    
 }
 
 function segundoparaminutos(segundos){
